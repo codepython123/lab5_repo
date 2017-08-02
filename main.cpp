@@ -15,52 +15,6 @@ void Node :: setNext(Node *Ptr)
 	
 }
 
-/*
-void setData(char temp)
-{
-    data = temp;
-}
-*/
-
-struct Queue
-{
-    Node* head = NULL;
-    Node* tail = NULL;
-};
-
-Node * addBack(Node *temp, Queue &list)
-{
-	
-	list.tail = temp;
-	return list.tail;
-}
-
-
-
-Node * getFront(Queue &list)
-{
- 
-    return list.head;
-}
-
-void removeFront(Queue &list)
-{
-	list.head = (*list.head).next;
-        
-//delete list.head;
-}
-
-
-bool isEmpty(Queue &list)
-{
-    if (list.head == NULL)
-    {
-        return true;
-    }
-
-    return false;
-}
-
 int main()
 {
     Node *first;
