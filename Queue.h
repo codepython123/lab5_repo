@@ -1,3 +1,8 @@
+#ifndef QUEUE_H
+#define QUEUE_H
+
+#include "Node.h"
+
 class Queue
 {
     Node* m_head;
@@ -6,8 +11,10 @@ class Queue
     public:
         Queue();
         ~Queue();
-        void addBack(); // puts on item at the end of the structure
-        Node* getFront() { return m_head; } // returns the value at the front of the structure
+        void addBack(char data); // puts on item at the end of the structure
+        char getFront() { return m_head->getData(); } // returns the value at the front of the structure
         void removeFront(); // removes the first item in the structure
         bool isEmpty(); // checks if queue is empty
 };
+
+#endif
